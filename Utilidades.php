@@ -68,4 +68,3 @@ class Utilidades {
         return array_unique(array_merge($array1, $array2));
     }
 }
-?>
