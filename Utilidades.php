@@ -68,32 +68,4 @@ class Utilidades {
         return array_unique(array_merge($array1, $array2));
     }
 }
-
-// Ejemplo de uso:
-$texto = " <script>alert('XSS');</script> ";
-$textoSaneado = Utilidades::sanearTexto($texto);
-echo "Texto saneado: " . $textoSaneado . "\n";
-
-// Supongamos que tienes una conexión a la base de datos:
-$conexion = new mysqli('localhost', 'usuario', 'contraseña', 'base_de_datos');
-
-$textoSQL = "SELECT * FROM users WHERE id = 1";
-$textoSQLSaneado = Utilidades::sanearSQL($textoSQL, $conexion);
-echo "Texto SQL saneado: " . $textoSQLSaneado . "\n";
-
-// Manejo de arrays:
-$array = [1, 2, '', 4, '0'];
-$arrayFiltrado = Utilidades::filtrarArray($array);
-print_r($arrayFiltrado);
-
-$array1 = [1, 2, 3];
-$array2 = [3, 4, 5];
-$arrayFusionado = Utilidades::fusionarArrays($array1, $array2);
-print_r($arrayFusionado);
-
-$arrayDesordenado = [5, 2, 8, 1];
-$arrayOrdenadoAsc = Utilidades::ordenarArrayAscendente($arrayDesordenado);
-print_r($arrayOrdenadoAsc);
-
-$arrayOrdenadoDesc = Utilidades::ordenarArrayDescendente($arrayDesordenado);
-print_r($arrayOrdenadoDesc);
+?>
