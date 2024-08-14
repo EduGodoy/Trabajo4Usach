@@ -55,7 +55,7 @@
     <h1>Bienvenido a Mi Página</h1>
 
     <h2>Tabla de Datos</h2>
-    <table>
+    <table aria-describedby="tabla de prueba">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -89,7 +89,8 @@
     <h2>Información</h2>
     <p>
         Esta es una página de ejemplo para demostrar cómo se puede estructurar una página HTML con varios elementos.
-        Aquí puedes ver cómo se utilizan las tablas, listas y formularios.</p>
+        Aquí puedes ver cómo se utilizan las tablas, listas y formularios.
+    </p>
 
     <h2>Lista de Elementos</h2>
     <ul>
