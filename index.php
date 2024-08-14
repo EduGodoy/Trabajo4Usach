@@ -87,7 +87,9 @@
     </table>
 
     <h2>Información</h2>
-    <p>Esta es una página de ejemplo para demostrar cómo se puede estructurar una página HTML con varios elementos. Aquí puedes ver cómo se utilizan las tablas, listas y formularios.</p>
+    <p>
+        Esta es una página de ejemplo para demostrar cómo se puede estructurar una página HTML con varios elementos.
+        Aquí puedes ver cómo se utilizan las tablas, listas y formularios.</p>
 
     <h2>Lista de Elementos</h2>
     <ul>
