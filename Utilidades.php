@@ -1,6 +1,7 @@
 <?php
 
-class Utilidades {
+class Utilidades
+{
 
     /**
      * Sanea un texto para prevenir inyecciones de código.
@@ -8,7 +9,8 @@ class Utilidades {
      * @param string $texto
      * @return string
      */
-    public static function sanearTexto($texto) {
+    public static function sanearTexto($texto)
+    {
         return htmlspecialchars(trim($texto), ENT_QUOTES, 'UTF-8');
     }
 
@@ -19,7 +21,8 @@ class Utilidades {
      * @param mysqli $conexion
      * @return string
      */
-    public static function sanearSQL($texto, $conexion) {
+    public static function sanearSQL($texto, $conexion)
+    {
         return mysqli_real_escape_string($conexion, $texto);
     }
 
@@ -29,8 +32,9 @@ class Utilidades {
      * @param array $array
      * @return array
      */
-    public static function filtrarArray($array) {
-        return array_filter($array, function($valor) {
+    public static function filtrarArray($array)
+    {
+        return array_filter($array, function ($valor) {
             return !empty($valor) || $valor === '0';
         });
     }
@@ -41,7 +45,8 @@ class Utilidades {
      * @param array $array
      * @return array
      */
-    public static function ordenarArrayAscendente($array) {
+    public static function ordenarArrayAscendente($array)
+    {
         sort($array);
         return $array;
     }
@@ -52,7 +57,8 @@ class Utilidades {
      * @param array $array
      * @return array
      */
-    public static function ordenarArrayDescendente($array) {
+    public static function ordenarArrayDescendente($array)
+    {
         rsort($array);
         return $array;
     }
@@ -64,7 +70,8 @@ class Utilidades {
      * @param array $array2
      * @return array
      */
-    public static function fusionarArrays($array1, $array2) {
+    public static function fusionarArrays($array1, $array2)
+    {
         return array_unique(array_merge($array1, $array2));
     }
 }
