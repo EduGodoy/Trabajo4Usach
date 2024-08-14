@@ -48,16 +48,3 @@ class ControladorUtilidades
         return Utilidades::fusionarArrays($array1, $array2);
     }
 }
-
-
-// Ejemplo de uso del controlador
-$array = [0, '', 'texto', null, '0', false, true];
-print_r($controlador->filtrarArray($array));
-
-$arrayDesordenado = [5, 3, 9, 1];
-print_r($controlador->ordenarArrayAscendente($arrayDesordenado));
-print_r($controlador->ordenarArrayDescendente($arrayDesordenado));
-
-$array1 = [1, 2, 3];
-$array2 = [3, 4, 5];
-print_r($controlador->fusionarYFiltrarArrays($array1, $array2));
