@@ -2,29 +2,6 @@
 
 class ControladorUtilidades
 {
-    private $conexion;
-
-    /**
-     * Constructor que recibe una conexión de base de datos.
-     *
-     * @param mysqli $conexion
-     */
-    public function __construct($conexion)
-    {
-        $this->conexion = $conexion;
-    }
-
-    /**
-     * Sanea un texto para prevenir inyecciones de código y SQL.
-     *
-     * @param string $texto
-     * @return string
-     */
-    public function sanearTextoCompleto($texto)
-    {
-        $textoSaneado = Utilidades::sanearTexto($texto);
-        return Utilidades::sanearSQL($textoSaneado, $this->conexion);
-    }
 
     /**
      * Filtra un array para eliminar valores vacíos.
@@ -74,9 +51,6 @@ class ControladorUtilidades
 
 
 // Ejemplo de uso del controlador
-$texto = "Ejemplo de texto con <b>HTML</b> y 'comillas'";
-echo $controlador->sanearTextoCompleto($texto);
-
 $array = [0, '', 'texto', null, '0', false, true];
 print_r($controlador->filtrarArray($array));
 
